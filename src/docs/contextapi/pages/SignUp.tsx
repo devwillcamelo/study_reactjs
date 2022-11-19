@@ -36,6 +36,9 @@ export const SignUp = () => {
         <div>
             Tela SignUp de {state.user.name} que tem {state.user.age} anos.
             <br />
+            <br />
+            Tema: {state.theme.status}
+
             <input type="text" 
                 placeholder="Digite seu nome"
                 value={nameInput}

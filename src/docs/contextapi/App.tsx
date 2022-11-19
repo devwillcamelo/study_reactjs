@@ -10,6 +10,7 @@ const App = () => {
     <ContextProvider>
         <BrowserRouter>
             <h1>Título da página</h1>
+            Tema: {state.theme.status}
             <hr />
             <Routes>
               <Route path="/" element={<SignUp />} />
