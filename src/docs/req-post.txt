@@ -1,0 +1,21 @@
+ const handleAddClick = async () => {
+    if(addTitleText && addBodyText) {
+     let response = await fetch ("http://depost.com.br/post", {
+      method: 'POST',
+      body: JSON.stringify({
+      title: addTitleText,
+      body: addBodyText,
+      userId: 1 // no caso por estar logado com o usuário, caso não fazer requisição do ID
+    }),
+    headers: {
+       'Content-Type': 'application/json'
+    }
+     });
+    } else {
+     alert("Preencha os dados!");
+    }
+  }
+
+
+- requisição post - enviando dados
+- edições de className com Tailwind

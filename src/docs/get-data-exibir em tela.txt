@@ -1,0 +1,14 @@
+    const [movies, setMovies] = useState([]);
+
+    const loadmovies = () => {
+      fetch ('URL DO GET')
+      .then((response) => {
+        response.json();
+      })
+      .then((json) => {
+        setMovies(json);
+      });
+    }
+
+
+- Fazendo um GET de um URL com um json

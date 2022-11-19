@@ -1,0 +1,10 @@
+  const [movies, setMovies] = useState([]);
+
+    const loadmovies = async () => {
+      let response = await fetch('URL de GET');
+      let json = await response.json();
+      setMovies(json);
+    }
+
+
+- Fazendo um GET com ASYNC - AWAIT

@@ -1,0 +1,25 @@
+function App() {
+    let list = [
+      'William',
+      'Maria',
+      'João',
+      'Pedro'
+    ];
+
+    return (
+
+      <div>
+      <h1> Lista de presentes</h1>
+          <ul>
+              {
+              list.map((item, index) => (<li key={index}>{item}</li>))
+              }
+          </ul>
+      </div>
+    );
+}
+
+export default App;
+
+
+- Lista

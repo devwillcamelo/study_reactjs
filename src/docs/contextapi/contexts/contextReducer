@@ -1,0 +1,38 @@
+import React, { createContext, useReducer } from "react";
+import { Context } from "./contexts/context";
+
+import { ReducerActionType } from "../../types/reducerActionType";
+
+import { UserType, userInitialState, useReducer } from "./reducers/useReducer";
+
+type ContextType = {
+    state: initialState,
+    dispatch: React.Dispatch<any>;
+}
+
+type initialState = {
+    user: UserType;
+}
+
+const initialState = {
+    user: userInitialState,
+}
+
+export const Context = createContext<ContextType>({
+    state: initialState,
+    dispatch: () => null
+});
+
+const mainReducer = ( user, action: ReducerActionType) => ({
+    user: useReducer (user, action)
+});
+
+export const ContextProvider: React.FD = ({ children }) => {
+    const [state, dispatch] = useReducer(mainReducer, initialState);
+    
+    return (
+        <Context.Provider value={{ state, dispatch }}>
+            {children}
+        </Context.Provider>
+    );
+}

@@ -1,0 +1,17 @@
+
+  const [movies, setMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+    const loadMovies = async () => {
+      setLoading(true);
+      let response = await fetch('URL de GET');
+      let json = await response.json();
+      setLoading(false);
+      setMovies(json);
+    }
+
+    {loading &&
+      <div> Carregando..</div>
+    }
+
+- Lidando com o loading da página

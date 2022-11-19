@@ -1,0 +1,27 @@
+import { useState } from 'react';
+
+function App() {
+    const [show, setShow] = useState(false);
+
+    const handleClick = () => {
+      setShow(!show);
+    }
+
+    return (
+      <div>
+        <button onClick={handleClick}>{show ? 'ocultar' : 'mostrar'}</button>
+
+        {show === true &&
+            <div> 
+              clicou? mostrou! conteúdo exclusivo!
+            </div>
+        }
+
+      </div>
+    );
+}
+
+export default App;
+
+
+- conteúdo condicional!

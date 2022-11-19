@@ -1,0 +1,38 @@
+App:
+
+import * as C from './AppStyles';
+
+
+function App() {
+    
+
+    return (
+      <div>
+        <C.Container> 
+          Texto do componente
+        </C.Container>
+        <C.Button>
+          Cadastre-se agora!
+        </C.Button>
+           
+      </div>
+    );
+}
+
+export default App;
+
+
+AppStyles:
+import styled from 'styled-components';
+
+export const Container = styled.div`
+    background-color: blue;
+    color: white;
+`;
+
+export const Button = styled.button`
+    background-color: yellow;
+    color: black;
+`;
+
+- organizando melhor com o Styled Components

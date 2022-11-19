@@ -1,0 +1,46 @@
+app:
+
+import React, { ChangeEvent, useState } from 'react';
+import { Button } from './components/Button';
+
+
+
+
+function App() {
+ 
+   const botaoEventAction = () => {
+     alert('Clicou Pai');
+   }
+
+  return (
+
+    <div>
+      <Button clickFn={botaoEventAction} />
+        
+    </div>
+  )
+}
+
+export default App;
+
+
+Button:
+
+import React from 'react';
+
+
+type Props = {
+    clickFn: () => void;
+}
+
+
+export const Button = ({clickFn}: Props) => {
+
+    return (
+        <button onClick={clickFn}>Clique aqui 1.0</button>
+    );
+}
+
+
+
+- Puxando a ação do app para o button, normalmente é o contrário.

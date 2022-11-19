@@ -1,0 +1,49 @@
+import React, { ChangeEvent, useState } from 'react';
+
+
+function App() {
+  const [name, setName] = useState('');
+  const [idade, setIdade] = useState('');
+
+  const handleNameInput = (event: ChangeEvent<HTMLInputElement>) => {
+      setName(event.target.value);
+  }
+
+  const handleAgeInput = (event: ChangeEvent<HTMLInputElement>) => {
+      setIdade(event.target.value);
+  }
+
+  return (
+
+    <div>
+      <h1>Formulário de cadastro</h1>
+        Nome: 
+            <input 
+              type="text" 
+              value={name} 
+              placeholder="Digite seu nome" 
+              onChange={handleNameInput}
+            />
+    <br/>
+        Email: 
+           <input 
+              type="text" 
+              placeholder="Digite seu melhor e-mail" 
+           />
+    <br/>
+        Idade: 
+            <input 
+              type="text" 
+              value={idade} 
+              placeholder="Qual sua idade?"
+              onChange={handleAgeInput} 
+            /> 
+    <hr/>
+    <br/>
+            Olá {name}, tudo bem?
+            <br/>
+            Você tem {idade}  anos?
+        
+    </div>
+  )
+}
